@@ -1,0 +1,41 @@
+[{
+	"type":"map",
+	"name":"map",
+	"label":"location"	
+},
+{
+	"type": "subform",
+	"name": "new",
+	"label": "New",
+	"fields": [{
+		"type": "text",
+		"name": "first_name",
+		"label": "First Name",
+		"value": "Dean"
+	},
+	{
+		"type": "text",
+		"name": "last_name",
+		"label": "Last Name",
+		"value": "McPherson"
+	},
+	{
+		"type": "subform",
+		"name": "new2",
+		"label": "New 2",
+		"max":"3",
+		"initial":"1",
+		"fields": [{
+			"type": "text",
+			"name": "first_name",
+			"label": "First Name",
+			"value": "Dean"
+		},
+		{
+			"type": "text",
+			"name": "last_name",
+			"label": "Last Name",
+			"value": "McPherson"
+		}]
+	}]
+}]
