@@ -18,19 +18,16 @@
     <script type="text/javascript" src="js/app.js"></script>
 </head>
 <body>
-<div data-role="page" id="container">
-<div ng-controller="FormCtrl">
-<div data-role="content" ng-controller="FormCtrl" >
-	<button ng-click="add()"></button>
-    <form-item ng-repeat="item in data" content="item"></form-item>
-</div>
-</div>
+<div data-role="page" id="container"  ng-controller="FormCtrl">
+    <a href="form/321">Another form</a>
+    <div data-role="content" >
+    	<h1>Test Form</h1>
+        <form-item ng-repeat="item in data" content="item"></form-item>
+    </div>
 </div>
 
 </body>
 <footer><script type="text/javascript">
-window.addEventListener('load', function() {
-    new FastClick(document.body);
-}, false);
+
 </script></footer>	
 </html>

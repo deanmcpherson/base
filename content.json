@@ -1,7 +1,22 @@
 [{
 	"type":"map",
-	"name":"map",
-	"label":"location"	
+	"name":"location",
+	"label":"Location"	
+},
+{
+	"type":"select",
+	"name":"select",
+	"label":"Select Box",
+	"values":[{
+	"v":"Option1",
+	"k":"Option 1"
+	},{
+	"v":"Option2",
+	"k":"Option 2"
+	},{
+	"v":"Option3",
+	"k":"Option 3"
+	}]
 },
 {
 	"type": "subform",
