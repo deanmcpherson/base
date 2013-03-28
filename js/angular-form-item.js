@@ -158,3 +158,36 @@
 	    };
 	});
 }());
+
+(function(){
+	var formaModule =angular.module("forma", ["form-items"]);
+	formaModule.directive('forma', function ($compile) {
+	  
+	
+	    var getTemplate = function(content) {
+			var tmp = '';
+			if (templates.chromeStart != undefined){ tmp += templates.chromeStart; }
+			tmp += templates[content.type](content);
+			if (templates.chromeEnd != undefined){ tmp += templates.chromeEnd; }
+	        return tmp;
+	    }
+
+	    var linker = function(scope, element, attrs) {
+			var html = '<form-item ng-repeat="item in '+ scope.model+'" content="item"></form-item>';
+			//html += getTemplate(scope.model);
+			element.html(html).show();
+
+			$compile(element.contents())(scope);
+	    }
+
+	    return {
+	        restrict: "E",
+	        rep1ace: true,
+			transclude: true,
+	        link: linker,
+	        scope: {
+	            model:'=',
+	        }
+	    };
+	});
+}());

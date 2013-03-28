@@ -4059,13 +4059,10 @@ $.mobile.getMaxScrollForTransition = $.mobile.getMaxScrollForTransition || defau
 				fromPage.data( "mobile-page" )._trigger( "hide", null, { nextPage: toPage } );
 			}
 			
-			//trigger pageshow, define prevPage as either fromPage or empty jQuery obj
-			try{
+			//trigger 
 			toPage.data( "mobile-page" )._trigger( "show", null, { prevPage: fromPage || $( "" ) } );
-			}
-			catch(e){
-				console.log(e);
-			}
+			
+			
 		});
 
 		return promise;

@@ -1,7 +1,9 @@
-var app = angular.module('myApp', ["form-items"]).config(function($routeProvider, $locationProvider){
+var d = {};
+var app = angular.module('myApp', ["forma"]).config(function($routeProvider, $locationProvider){
 
 	$routeProvider.when('/form/:id',{
-		templateUrl:'test.html'
+		templateUrl:'test.html',
+		onActivate: function(){ }
 	});
 
 });
@@ -64,7 +66,7 @@ function FormCtrl($scope, $http, $route) {
 			$scope.data = data;
         });
     }
-	$(document).on("pagecreate", function(){$scope.$apply(); });
+    
 	form.scope = $scope;
     $scope.update();
 }
