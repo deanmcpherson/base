@@ -1,0 +1,101 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	border: 0;
+}
+
+header {
+	height: 70px;
+}
+
+header #current {
+	background-color: #fff06a;
+	height:100%;
+	width:100%;
+}
+
+#icon {
+background-color: #57a289;
+height:70px;
+}
+
+#formList {
+	color: white;
+	background-color:#005181;
+	width: 120px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#fieldList {
+	color: white;
+	width: 120px;
+	position: absolute;
+	top: 0;
+	left: 120px;
+	background-color: #94CB68;
+}
+
+#parentForm:empty { display:none; }
+
+#Spinner {
+	top:-200px;
+	left: 50%;
+	margin-top:-50px;
+	margin-left:-50px;
+	position:absolute; 
+	-webkit-transition:all 1s;
+}
+
+#Spinner.act {
+	top:350px; 
+}
+	.spinner { 
+		width:100px; 
+		height:100px; 
+		background:#000; 
+		border-radius:100px; 
+		position:absolute;
+		opacity: .6; 
+	}
+		.anim {
+			-webkit-animation-play-state:paused;
+	-webkit-animation: shrink 2s infinite alternate backwards;
+	}
+		.anim2 {
+			-webkit-animation-play-state:paused;
+	-webkit-animation: shrink 2s 1s infinite alternate backwards;
+	}
+		.anim3 {
+			-webkit-animation-play-state:paused;
+	-webkit-animation: shrink 2s 2s infinite alternate backwards;
+	}
+	.anim4 {
+		-webkit-animation-play-state:paused;
+		-webkit-animation: shrink 2s 3s infinite alternate backwards;
+	}
+
+	.act .anim, .act .anim2, .act .anim3, .act .anim4 {
+		-webkit-animation-play-state: running;
+	}
+
+@-webkit-keyframes shrink {
+
+    0%, 100%{
+        transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+        -o-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1, 0);
+        -webkit-transform: scale(1, 0);
+        -moz-transform: scale(1, 0);
+        -o-transform: scale(1, 0);
+        -ms-transform: scale(1, 0);
+    }
+}
