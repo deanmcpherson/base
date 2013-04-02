@@ -3,10 +3,12 @@ html, body {
 	width: 100%;
 	margin: 0;
 	border: 0;
+	font-family: helvetica, arial, sans;
 }
 
 header {
 	height: 70px;
+	width:100%;
 }
 
 header #current {
@@ -15,27 +17,70 @@ header #current {
 	width:100%;
 }
 
-#icon {
+.add {
+	text-align: center;
+	font-size:4em;
+}
+
+#formList > .add p {
+	position: relative;
+	top: -9px;
+	color: transparent;
+	text-shadow: 0 0 20px rgba(100, 174, 255, .9), 0 0 1px rgba(0, 0, 0, .4);
+}
+
+#formList > #icon {
 background-color: #57a289;
 height:70px;
+margin: 0;
+padding: 0;
 }
 
 #formList {
 	color: white;
 	background-color:#005181;
-	width: 120px;
+	width: 200px;
 	position: absolute;
 	top: 0;
 	left: 0;
+	height:100%;
+}
+
+#formList > div {
+	height: 45px;
+	margin: 2px 1px;
+	background-color: #2281bf;
+	box-shadow: 0 1px 3px rgba(0,0,0,.5);
+	padding: 5px;
+	padding-bottom: 15px;
+}
+
+#formList > div.act {
+	background-color: #006cb6;
+	box-shadow: 0 0 65px rgba(0,0,0, .2) inset;
+}
+
+#formList h1 {
+	font-weight: normal;
+	font-size: 1.5em;
+	margin: 0;
+}
+
+#formList p {
+	color: #bdc2c5;
+	top: -4px;
+	position: relative;
+	margin: 0;
 }
 
 #fieldList {
 	color: white;
-	width: 120px;
+	width: 200px;
 	position: absolute;
 	top: 0;
-	left: 120px;
+	left: 200px;
 	background-color: #94CB68;
+	height: 100%;
 }
 
 #parentForm:empty { display:none; }
